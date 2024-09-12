@@ -1,0 +1,23 @@
+# Ignore editor and IDE files
+.vscode/
+.idea/
+
+# Ignore build artifacts
+build/
+dist/
+
+# Ignore dependency directories
+node_modules/
+vendor/
+
+# Ignore environment configuration files
+.env
+.env.local
+.env.*.local
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+*.temp
