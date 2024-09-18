@@ -26,20 +26,20 @@ const shadeMapping = {
   "900": "50",
 };
 
-const generateThemeObject = (colors: any, mapping: any, invert = false) => {
-  const theme: any = {};
+const generatedThemeObject = (colors: any, mapping: any, invert = false) => {
+  const themes: any = {};
   baseColors.forEach((color) => {
-    theme[color] = {};
+    themes[color] = {};
     Object.entries(mapping).forEach(([key, value]: any) => {
       const shadeKey = invert ? value : key;
-      theme[color][key] = colors[color][shadeKey];
+      themes[color][key] = colors[color][shadeKey];
     });
   });
-  return theme;
+  return themes;
 };
 
-const lightTheme = generateThemeObject(colors, shadeMapping);
-const darkTheme = generateThemeObject(colors, shadeMapping, true);
+const lightTheme = generatedThemeObject(colors, shadeMapping);
+const darkTheme = generatedThemeObject(colors, shadeMapping, true);
 
 const themes = {
   light: {
@@ -65,11 +65,10 @@ const config: Config = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+          "conic-gradient(from 180 deg at 50% 50%,var(--tw-gradient-stops))",
       },
     },
   },
   plugins: [createThemes(themes)],
 };
-
 export default config;
