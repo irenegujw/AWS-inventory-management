@@ -21,3 +21,11 @@ vendor/
 # Ignore temporary files
 *.tmp
 *.temp
+
+inv/node_modules/
+server/node_modules/
+client/dist/
+server/dist/
+client/.env
+server/.env
+client/.next/

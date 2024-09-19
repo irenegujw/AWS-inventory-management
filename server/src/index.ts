@@ -8,7 +8,7 @@ import morgan from "morgan";
 import dashboardRoutes from "./routes/dashboardRoutes";
 import productRoutes from "./routes/productRoutes";
 import userRoutes from "./routes/userRoutes";
-import expenseRoutes from "./routes/expenseRoutes";
+import expenseRoutes from "./routes/expenseRoute";
 
 /* CONFIGURATIONS */
 dotenv.config();
