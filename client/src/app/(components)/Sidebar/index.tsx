@@ -2,9 +2,18 @@
 
 import { useAppDispatch, useAppSelector } from "@/app/redux";
 import { setIsSidebarCollapsed } from "@/state";
-import { Menu, LucideIcon, Layout, Archive, User, SlidersHorizontal, Clipboard, CircleDollarSign ,LogInIcon} from "lucide-react";
+import {
+  Menu,
+  LucideIcon,
+  Layout,
+  Archive,
+  User,
+  SlidersHorizontal,
+  Clipboard,
+  CircleDollarSign,
+} from "lucide-react";
 import Link from "next/link";
-// import Image from "next/image";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import React from "react";
 
@@ -67,13 +76,19 @@ const SideBar = () => {
   return (
     <div className={sidebarClassNames}>
       {/* TOP LOGO */}
- 
+
       <div
         className={`flex gap-3 justify-between md:justify-normal items-center pt-8 ${
           isSidebarCollapsed ? "px-5" : "px-8"
         }`}
       >
-        <LogInIcon/>
+        <Image
+          src="s3-inventory-management-irene.s3.us-west-1.amazonaws.com/assets/logo.png"
+          width={27}
+          height={27}
+          alt="ReneStock"
+          className="rounded w-8"
+        />
         <h1
           className={`font-extrabold text-2xl ${
             isSidebarCollapsed ? "hidden" : "block"
@@ -91,7 +106,7 @@ const SideBar = () => {
 
       {/* LINKS */}
       <div className="flex-grow mt-8">
-      <SidebarLink
+        <SidebarLink
           href="/dashboard"
           icon={Layout}
           label="Dashboard"
@@ -131,7 +146,9 @@ const SideBar = () => {
 
       {/* FOOTER */}
       <div className={`${isSidebarCollapsed ? "hidden" : "block"} mb-10`}>
-        <p className="text-center text-xs text-gray-500">&copy; 2024 ReneStock</p>
+        <p className="text-center text-xs text-gray-500">
+          &copy; 2024 ReneStock
+        </p>
       </div>
     </div>
   );
