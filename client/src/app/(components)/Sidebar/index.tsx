@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from "@/app/redux";
 import { setIsSidebarCollapsed } from "@/state";
 import { Menu, LucideIcon, Layout, Archive, User, SlidersHorizontal, Clipboard, CircleDollarSign ,LogInIcon} from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 import { usePathname } from "next/navigation";
 import React from "react";
 

@@ -1,7 +1,7 @@
 import { useGetDashboardMetricsQuery } from "@/state/api";
 import Rating from "../(components)/Rating";
 import { ShoppingBag } from "lucide-react";
-import Image from "next/image";
+// import Image from "next/image";
 import React from "react";
 
 const CardPopularProducts = () => {
